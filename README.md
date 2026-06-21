@@ -149,12 +149,18 @@ AI-Recommendation-Logic-Tech-Stack-Recommender/
 
 ---
 
-# Installation Guide
+## Installation Guide
 
-Clone repository:
+Clone the repository:
 
 ```bash
-git clone [<repository-url>](https://github.com/anmol396/Tech-Stack-Recommender)
+git clone https://github.com/anmol396/Tech-Stack-Recommender.git
+```
+
+Open project folder:
+
+```bash
+cd Tech-Stack-Recommender
 ```
 
 Install dependencies:
@@ -163,11 +169,12 @@ Install dependencies:
 pip install -r requirements.txt
 ```
 
-Run project:
+Run the project:
 
 ```bash
 python recommender.py
 ```
+
 
 ---
 
