@@ -1,41 +1,67 @@
 # AI-Recommendation-Logic-Tech-Stack-Recommender
 
-A Python-based career recommendation system that suggests technology career paths using user skills and similarity scoring.
+<div align="center">
 
-The project combines TF-IDF, Cosine Similarity, and Skill Coverage to generate personalized recommendations and learning guidance.
+[![Python](https://img.shields.io/badge/Python-3.x-3776AB?logo=python\&logoColor=white)](https://www.python.org/)
+[![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-ML-F7931E?logo=scikitlearn\&logoColor=white)](https://scikit-learn.org/)
+[![Pandas](https://img.shields.io/badge/Pandas-Data-150458?logo=pandas\&logoColor=white)](https://pandas.pydata.org/)
+[![NumPy](https://img.shields.io/badge/NumPy-013243?logo=numpy\&logoColor=white)](https://numpy.org/)
+[![Matplotlib](https://img.shields.io/badge/Matplotlib-Visualization-11557C)](https://matplotlib.org/)
+[![Seaborn](https://img.shields.io/badge/Seaborn-Visualization-4C72B0)](https://seaborn.pydata.org/)
+
+</div>
+
+<br>
+
+A Python-based recommendation engine that analyzes user skills and suggests suitable technology career paths using similarity-based scoring techniques.
+
+The project combines **TF-IDF**, **Cosine Similarity**, and **Skill Coverage** to generate personalized recommendations, learning paths, and career insights.
 
 ---
 
-## Project Objective
+# Project Overview
 
-Build a simple recommendation engine that:
+This project helps users:
 
-- Accepts user skills
-- Matches skills with career roles
-- Calculates recommendation scores
-- Suggests skills to learn next
-- Generates visual career insights
+* Discover matching technology career paths
+* Understand current skill readiness
+* Identify missing skills
+* Receive personalized learning guidance
+* Visualize recommendation results
 
 ---
 
-## Recommendation Logic
+# Key Highlights
+
+✔ Skill-based recommendation engine
+✔ TF-IDF vectorization
+✔ Cosine similarity ranking
+✔ Skill coverage scoring
+✔ Career recommendation logic
+✔ Graph generation and analysis
+✔ Beginner-friendly implementation
+
+---
+
+# Recommendation Method
 
 ### Formula
 
 ```text
 Final Score =
-0.7 × Cosine Similarity  + 0.3 × Skill Coverage
+(0.7 × Cosine Similarity)
++
+(0.3 × Skill Coverage)
 ```
 
-| Method | Purpose |
-|---|---|
-| TF-IDF | Gives importance to specific skills |
-| Cosine Similarity | Measures skill similarity |
-| Skill Coverage | Calculates matched skills percentage |
+| Component                  | Weight | Purpose                                 |
+| -------------------------- | -----: | --------------------------------------- |
+| TF-IDF + Cosine Similarity |    70% | Calculates similarity between skills    |
+| Skill Coverage             |    30% | Calculates percentage of matched skills |
 
 ---
 
-## Workflow
+# Project Workflow
 
 ```text
 User Skills
@@ -50,76 +76,62 @@ Final Ranking
 ↓
 Career Recommendation
 ↓
-Graphs
+Visualization
 ```
 
 ---
 
-## Skill Normalization
+# Dataset
 
-| Input | Converted To |
-|---|---|
-| ml | machinelearning |
-| ai | artificialintelligence |
-| dl | deeplearning |
-| cloud | cloud aws azure |
-| api | rest api |
+The recommendation dataset contains **27 Technology Roles** and required skills.
 
----
-
-## Dataset
-
-Contains **26 technology roles** across:
-
-| Domain | Example Roles |
-|---|---|
-| AI / ML | AI Engineer, ML Engineer |
-| Data | Data Scientist, Data Analyst |
-| Cloud | Cloud Engineer, DevOps |
-| Development | Backend, Full Stack |
-| Security | Cyber Security Analyst |
+| Domain                  | Example Roles                 |
+| ----------------------- | ----------------------------- |
+| Artificial Intelligence | AI Engineer, Prompt Engineer  |
+| Data                    | Data Scientist, Data Analyst  |
+| Cloud                   | Cloud Engineer, DevOps        |
+| Development             | Backend, Frontend, Full Stack |
+| Security                | Cyber Security Analyst        |
+| Analytics               | Business Analyst              |
+| Infrastructure          | MLOps, Cloud Architect        |
 
 ---
 
-## Generated Outputs
+# Features
 
-| Output | Description |
-|---|---|
-| career_scores.png | Top career recommendations |
-| skills_match_matrix.png | Skill matching overview |
-| similarity_scores.png | Recommendation comparison |
-
----
-
-## Example
-
-### Input
-
-```text
-Python, NLP, ML, LLM
-```
-
-### Output
-
-| Metric | Result |
-|---|---|
-| Recommended Role | AI Engineer |
-| Match Score | 62.4% |
-| Readiness | Intermediate |
-
-### Suggested Learning Path
-
-```text
-Deep Learning
-TensorFlow
-PyTorch
-FastAPI
-Git
-```
+| Feature               | Description                         |
+| --------------------- | ----------------------------------- |
+| Skill Input           | Accept user technical skills        |
+| Skill Normalization   | Convert abbreviations automatically |
+| Recommendation Engine | Rank careers using scoring          |
+| Learning Suggestions  | Show missing skills                 |
+| Visualization         | Generate readable graphs            |
 
 ---
 
-## Project Structure
+# Generated Outputs
+
+| Output File         | Purpose                           |
+| ------------------- | --------------------------------- |
+| `career_scores.png` | Top recommendation comparison     |
+| `skills_match.png`  | Skills matched vs skills to learn |
+| `skills_gap.png`    | Learning gap analysis             |
+
+---
+
+# Tech Stack
+
+| Category             | Technology                |
+| -------------------- | ------------------------- |
+| Programming Language | Python                    |
+| Data Processing      | Pandas, NumPy             |
+| Machine Learning     | Scikit-learn              |
+| Recommendation Logic | TF-IDF, Cosine Similarity |
+| Visualization        | Matplotlib, Seaborn       |
+
+---
+
+# Project Structure
 
 ```text
 AI-Recommendation-Logic-Tech-Stack-Recommender/
@@ -128,20 +140,30 @@ AI-Recommendation-Logic-Tech-Stack-Recommender/
 ├── raw_skills.csv
 ├── README.md
 ├── requirements.txt
+│
 └── graphs/
+    ├── career_scores.png
+    ├── skills_match.png
+    └── skills_gap.png
 ```
 
 ---
 
-## Installation
+# Installation Guide
+
+Clone repository:
+
+```bash
+git clone <repository-url>
+```
+
+Install dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
 
----
-
-## Run
+Run project:
 
 ```bash
 python recommender.py
@@ -149,28 +171,45 @@ python recommender.py
 
 ---
 
-## Technologies
+# Sample Input
 
-| Category | Tools |
-|---|---|
-| Language | Python |
-| Data | Pandas, NumPy |
-| ML | Scikit-learn |
-| Visualization | Matplotlib, Seaborn |
+```text
+Python, NLP, ML, LLM
+```
+
+# Sample Output
+
+```text
+Recommended Role → AI Engineer
+Match Score → 62.4%
+Suggested Learning →
+DeepLearning
+TensorFlow
+PyTorch
+FastAPI
+Git
+```
 
 ---
 
-## Learning Outcomes
+# Learning Outcomes
 
-- Recommendation Systems
-- TF-IDF
-- Cosine Similarity
-- Composite Scoring
-- Data Visualization
+* Recommendation Systems
+* TF-IDF Vectorization
+* Cosine Similarity
+* Composite Scoring
+* Data Visualization
+* Career Recommendation Logic
 
 ---
 
-Future scope:
-- Streamlit Web App
-- Resume Recommendation
-- Interactive Dashboard
+# Future Scope
+
+* Streamlit Web Application
+* Resume-Based Recommendation
+* Interactive Dashboard
+* Personalized Learning Roadmaps
+
+---
+
+Developed as part of **Project 3 – AI Recommendation Logic**
