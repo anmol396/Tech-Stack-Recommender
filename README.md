@@ -154,7 +154,7 @@ AI-Recommendation-Logic-Tech-Stack-Recommender/
 Clone repository:
 
 ```bash
-git clone <repository-url>
+git clone [<repository-url>](https://github.com/anmol396/Tech-Stack-Recommender)
 ```
 
 Install dependencies:
