@@ -24,9 +24,7 @@ Build a simple recommendation engine that:
 
 ```text
 Final Score =
-0.7 × Cosine Similarity
-+
-0.3 × Skill Coverage
+0.7 × Cosine Similarity  + 0.3 × Skill Coverage
 ```
 
 | Method | Purpose |
